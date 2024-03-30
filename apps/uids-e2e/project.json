@@ -1,19 +1,19 @@
 {
-  "name": "intro-e2e",
+  "name": "uids-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/intro-e2e/src",
+  "sourceRoot": "apps/uids-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
       "executor": "@nrwl/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/intro-e2e/cypress.config.ts",
-        "devServerTarget": "intro:serve:development",
+        "cypressConfig": "apps/uids-e2e/cypress.config.ts",
+        "devServerTarget": "uids:serve:development",
         "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "intro:serve:production"
+          "devServerTarget": "uids:serve:production"
         }
       }
     },
@@ -21,10 +21,10 @@
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["apps/intro-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": ["apps/uids-e2e/**/*.{js,ts}"]
       }
     }
   },
   "tags": [],
-  "implicitDependencies": ["intro"]
+  "implicitDependencies": ["uids"]
 }
