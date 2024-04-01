@@ -19,7 +19,7 @@
         "assets": ["apps/uids/src/favicon.ico", "apps/uids/src/assets"],
         "styles": ["apps/uids/src/styles.css"],
         "scripts": [],
-        "webpackConfig": "@nrwl/react/plugins/webpack"
+        "webpackConfig": "apps/uids/webpack.config.js"
       },
       "configurations": {
         "development": {
@@ -45,13 +45,12 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/webpack:dev-server",
+      "executor": "@nrwl/react:module-federation-dev-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "uids:build",
         "hmr": true,
-        "port": 4201,
-        "baseHref": "/uids/"
+        "port": 4202
       },
       "configurations": {
         "development": {
@@ -61,6 +60,14 @@
           "buildTarget": "uids:build:production",
           "hmr": false
         }
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/web:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "uids:build",
+        "port": 4202
       }
     },
     "lint": {
