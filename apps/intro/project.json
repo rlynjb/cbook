@@ -13,7 +13,7 @@
         "outputPath": "dist/apps/intro",
         "index": "apps/intro/src/index.html",
         "baseHref": "/",
-        "main": "apps/intro/src/main.tsx",
+        "main": "apps/intro/src/main.ts",
         "polyfills": "apps/intro/src/polyfills.ts",
         "tsConfig": "apps/intro/tsconfig.app.json",
         "assets": ["apps/intro/src/favicon.ico", "apps/intro/src/assets"],
